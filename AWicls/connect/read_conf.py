@@ -19,6 +19,6 @@ def read_yaml(FilePath):
 
 # 测试
 if __name__ == '__main__':
-    filepath = r'../../config/config.yaml'
+    filepath = r'../../practicespark/config/config.yaml'
     conf = read_yaml(filepath)
     print(conf)
