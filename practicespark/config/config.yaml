@@ -7,3 +7,8 @@ hive:
   auth: NOSASL
   configuration:
 
+hbase:
+  host: master
+
+hdfs:
+  host: master
