@@ -3,4 +3,4 @@ from pyhive import hive
 
 def connect_hive(conf):
     hive.Connection()
-    pass
+    return 0
