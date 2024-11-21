@@ -1,0 +1,9 @@
+# hive配置项
+hive:
+  host: master
+  port: 10000
+  username: root
+  password: None
+  auth: NOSASL
+  configuration:
+
