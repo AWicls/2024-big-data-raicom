@@ -1,9 +1,10 @@
 # hive配置项
 hive:
-  host: master
+  host: 10.1.28.100
   port: 10000
   username: root
-  password: None
+  password:
+  database: tdatabase
   auth: NOSASL
   configuration:
 
