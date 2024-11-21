@@ -1,3 +1,5 @@
+# practicesklearn
+- 此文件夹为机器学习,特征工程,数据挖掘模块
 ```commandline
 customer_segmentation_marketing/
 │
