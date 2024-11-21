@@ -73,3 +73,7 @@ export YARN_CONF_DIR=/opt/module/hadoop/etc/hadoop
 浏览器访问10.1.27.142:8080出现以下界面：
 
 ![image-20241121205756882](raicom-Spark分布式部署.assets/image-20241121205756882.png)
+
+---
+
+**Spark分布式集群部署完毕！**
