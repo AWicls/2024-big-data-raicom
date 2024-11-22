@@ -81,6 +81,10 @@
 		<name>yarn.resourcemanager.hostname</name>
 		<value>raicom2</value>
 	</property>
+	<!--yarn执行MapReduce任务时的classpath-->
+	<property>
+        <name>yarn.application.classpath</name> <value>/opt/module/hadoop/etc/hadoop:/opt/module/hadoop/share/hadoop/common/lib/*:/opt/module/hadoop/share/hadoop/common/*:/opt/module/hadoop/share/hadoop/hdfs:/opt/module/hadoop/share/hadoop/hdfs/lib/*:/opt/module/hadoop/share/hadoop/hdfs/*:/opt/module/hadoop/share/hadoop/mapreduce/lib/*:/opt/module/hadoop/share/hadoop/mapreduce/*:/opt/module/hadoop/share/hadoop/yarn:/opt/module/hadoop/share/hadoop/yarn/lib/*:/opt/module/hadoop/share/hadoop/yarn/*</value>
+</property>
 ```
 
 ###### 1.1.4 mapred-site.xml文件
