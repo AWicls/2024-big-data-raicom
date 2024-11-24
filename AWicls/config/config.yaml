@@ -14,7 +14,7 @@ hive:
   port: 10000
   username: root
   password:
-  database: tdatabase
+  database: test
   auth: NOSASL
   configuration:
 

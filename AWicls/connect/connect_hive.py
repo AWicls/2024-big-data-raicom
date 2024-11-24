@@ -11,7 +11,7 @@ def connect_hive_to_curser():
         hive.Cursor: Hive数据库的cursor对象，用于执行SQL查询。
     """
     # 配置文件路径
-    filepath = r'../../practicespark/config/config.yaml'
+    filepath = r'../config/config.yaml'
     # 读取配置文件中的Hive配置信息
     conf = read_yaml(filepath).get('hive')
 

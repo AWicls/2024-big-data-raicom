@@ -10,12 +10,12 @@ local_path = '../data/word.csv'  # 替换为本地文件路径
 user = 'root'  # 替换为你的 Hadoop 用户名
 
 # 创建 InsecureClient 对象
-client = InsecureClient(hdfs_url, user=user)
+client = InsecureClient(hdfs_url, user)
 
 
 def upload_to_hdfs(hdfs_path, local_path):
     """将本地文件上传到 HDFS"""
-    client.upload(hdfs_path=hdfs_path, local_path=local_path)
+    client.upload(hdfs_path, local_path)
     print(f"File uploaded to HDFS: {hdfs_path}")
 
 
