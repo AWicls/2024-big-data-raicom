@@ -28,3 +28,9 @@ hbase:
 hdfs:
   url: http://slave01:9870
   user: root
+
+# Spark配置项
+spark:
+  hive:
+    spark.sql.warehouse.dir: hdfs://master:8020/hive
+    config('hive.metastore.uris: thrift://master:9083

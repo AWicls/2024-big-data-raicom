@@ -1,5 +1,5 @@
 # 导入必要的模块
-from practicespark.src.tools.read_config import get_yaml_data
+from practicespark.src.utils.read_config import get_yaml_data
 import logging
 from hdfs import InsecureClient
 
