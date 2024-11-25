@@ -3,7 +3,7 @@
 
 from collections import Counter
 import pandas as pd
-from hdfs_operations import read_from_hdfs
+
 
 
 def count_words(words):
