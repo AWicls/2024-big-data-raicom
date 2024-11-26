@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 
 # 读取训练数据集
-data = pd.read_csv(r"D:\raicom\2024-big-data-raicom\practicesklearn\data\drug200.csv", )
+data = pd.read_csv(r"practice_sklearn\data\drug200.csv", )
 
 # 提取特征值和训练数据
 data_target = data["Drug"]

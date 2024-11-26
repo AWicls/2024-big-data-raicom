@@ -1,5 +1,5 @@
 # 导入必要的模块
-from practicespark.src.utils.read_config import get_yaml_data
+from practice_spark.src.utils.read_config import get_yaml_data
 import logging
 from hdfs import InsecureClient
 
@@ -15,8 +15,8 @@ def hdfs_connect_InsecureClient():
         InsecureClient: 连接到 HDFS 的客户端对象
     """
     hdfs_conf = get_yaml_data().get('hdfs')
-    client = InsecureClient(hdfs_conf.get('url'), hdfs_conf.get('user'))
-    return client
+    __client = InsecureClient(hdfs_conf.get('url'), hdfs_conf.get('user'))
+    return __client
 
 
 def hdfs_local_upload_to_hdfs(hdfs_client, hdfs_path, local_path):
@@ -82,22 +82,22 @@ def hdfs_delete_file_from_hdfs(hdfs_client, hdfs_path):
         print(e)
 
 
-if __name__ == '__main__':
-    # HDFS 和本地文件路径
-    hdfs_path = r'/raicom/module02/data/word.csv'
-    local_path = r'../../data/word.csv'
-
-    # 连接到 HDFS
-    client = hdfs_connect_InsecureClient()
-
-    # 上传文件到 HDFS
-    hdfs_local_upload_to_hdfs(client, hdfs_path, local_path)
-
-    # 读取 HDFS 文件内容
-    read = hdfs_read_from_hdfs(client, hdfs_path)
-
-    # 删除 HDFS 文件
-    hdfs_delete_file_from_hdfs(client, hdfs_path)
-
-    # 打印读取的内容
-    print(read)
+# if __name__ == '__main__':
+#     # HDFS 和本地文件路径
+#     hdfs_path = r'/raicom/data/word.csv'
+#     local_path = r'../../data/word.csv'
+#
+#     # 连接到 HDFS
+#     client = hdfs_connect_InsecureClient()
+#
+#     # 上传文件到 HDFS
+#     hdfs_local_upload_to_hdfs(client, hdfs_path, local_path)
+#
+#     # 读取 HDFS 文件内容
+#     read = hdfs_read_from_hdfs(client, hdfs_path)
+#
+#     # 删除 HDFS 文件
+#     hdfs_delete_file_from_hdfs(client, hdfs_path)
+#
+#     # 打印读取的内容
+#     print(read)

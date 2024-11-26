@@ -3,7 +3,13 @@
 
 from collections import Counter
 import pandas as pd
+from practice_spark.src.db.hdfs_operation import hdfs_connect_InsecureClient, hdfs_read_from_hdfs, \
+    hdfs_local_upload_to_hdfs
+from practice_spark.src.db.local_load_operation import pandas_read_local_data_of_csv
+from pyspark.sql import SparkSession
+import os
 
+os.environ['PYSPARK_PYTHON'] = r'C:\Users\AWII\.conda\envs\spark\python.exe'
 
 
 def count_words(words):
@@ -14,10 +20,3 @@ def count_words(words):
 def save_results(word_count, output_file):
     df = pd.DataFrame(word_count.item(), columns=["word", "count"])
     df.to_csv(output_file, index=False)
-
-
-if __name__ == '__main__':
-    hdfs_path = r'/data/word.csv'
-    data = read_from_hdfs(hdfs_path)
-    count = count_words(data)
-    print(count)

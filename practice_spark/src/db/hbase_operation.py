@@ -1,5 +1,5 @@
 # 导入必要的模块
-from practicespark.src.utils.read_config import get_yaml_data
+from practice_spark.src.utils.read_config import get_yaml_data
 import happybase
 import logging
 
@@ -154,13 +154,13 @@ def delete_table(hbase_connection, table_name):
         logging.error(f"Failed to delete table '{table_name}': {e}")
 
 
-if __name__ == '__main__':
-    # 连接到 HBase
-    connection = hbase_connect()
-
-    if connection:
-        # 示例操作：获取数据、插入数据、删除数据等
-        # 请根据实际需求调用相应的函数
-
-        # 关闭连接
-        hbase_close(connection)
+# if __name__ == '__main__':
+#     # 连接到 HBase
+#     connection = hbase_connect()
+#
+#     if connection:
+#         # 示例操作：获取数据、插入数据、删除数据等
+#         # 请根据实际需求调用相应的函数
+#
+#         # 关闭连接
+#         hbase_close(connection)

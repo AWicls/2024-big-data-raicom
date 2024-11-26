@@ -1,5 +1,5 @@
 # 导入必要的模块
-from practicespark.src.utils.read_config import get_yaml_data
+from practice_spark.src.utils.read_config import get_yaml_data
 import logging
 from pyhive import hive
 
@@ -62,23 +62,23 @@ def hive_close(close_cursor):
     close_cursor.close()
 
 
-if __name__ == '__main__':
-    # 获取 Hive 游标对象
-    cursor = hive_connect_cursor()
-
-    # 定义创建表的 SQL 语句
-    sql_create = 'create table if not exists table2(id int, name string)'
-
-    # 定义查询表的 SQL 语句
-    sql_query = "show tables"
-
-    # 执行创建表的 SQL 语句
-    hive_execute(cursor, sql_create)
-
-    # 执行查询表的 SQL 语句并获取结果
-    data = hive_execute(cursor, sql_query)
-
-    hive_close(cursor)
-
-    # 打印查询结果
-    print(data)
+# if __name__ == '__main__':
+#     # 获取 Hive 游标对象
+#     cursor = hive_connect_cursor()
+#
+#     # 定义创建表的 SQL 语句
+#     sql_create = 'create table if not exists table2(id int, name string)'
+#
+#     # 定义查询表的 SQL 语句
+#     sql_query = "show tables"
+#
+#     # 执行创建表的 SQL 语句
+#     hive_execute(cursor, sql_create)
+#
+#     # 执行查询表的 SQL 语句并获取结果
+#     data = hive_execute(cursor, sql_query)
+#
+#     hive_close(cursor)
+#
+#     # 打印查询结果
+#     print(data)

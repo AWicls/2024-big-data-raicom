@@ -26,11 +26,11 @@ hbase:
 
 # HDFS配置项
 hdfs:
-  url: http://slave01:9870
+  url: http://mycluster:9870
   user: root
 
 # Spark配置项
 spark:
   hive:
-    spark.sql.warehouse.dir: hdfs://master:8020/hive
-    config('hive.metastore.uris: thrift://master:9083
+    spark_sql_warehouse_dir: hdfs://master:8020/hive
+    hive_metastore_uris: thrift://master:9083

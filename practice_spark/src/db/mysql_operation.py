@@ -1,5 +1,5 @@
 # 导入必要的模块
-from practicespark.src.utils.read_config import get_yaml_data
+from practice_spark.src.utils.read_config import get_yaml_data
 import logging
 import pymysql
 
@@ -63,18 +63,18 @@ def mysql_close(mysql_conn):
         logging.info("MySQL connection closed")
 
 
-if __name__ == '__main__':
-    # SQL 语句
-    sql = 'SHOW DATABASES'
-
-    # 获取数据库连接
-    mysql_conn = mysql_connect()
-
-    # 执行 SQL 语句并获取结果
-    data = mysql_execute(mysql_conn, sql)
-
-    # 打印查询结果
-    print(data)
-
-    # 关闭数据库连接
-    mysql_close(mysql_conn)
+# if __name__ == '__main__':
+#     # SQL 语句
+#     sql = 'SHOW DATABASES'
+#
+#     # 获取数据库连接
+#     mysql_conn = mysql_connect()
+#
+#     # 执行 SQL 语句并获取结果
+#     data = mysql_execute(mysql_conn, sql)
+#
+#     # 打印查询结果
+#     print(data)
+#
+#     # 关闭数据库连接
+#     mysql_close(mysql_conn)
