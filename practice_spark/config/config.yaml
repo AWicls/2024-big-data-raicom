@@ -1,0 +1,36 @@
+# MySQL配置项
+mysql:
+  host: 10.1.28.100
+  port: 3306
+  user: root
+  password: 121212.o
+  database: raicom
+  ssl:
+  charset: utf8mb4
+  use_unicode: True
+
+# Hive配置项
+hive:
+  host: master
+  port: 10000
+  username: root
+  password:
+  database: raicom
+  auth: NOSASL
+  configuration:
+
+# HBase配置项
+hbase:
+  host: master
+  port: 2181
+
+# HDFS配置项
+hdfs:
+  url: http://mycluster:9870
+  user: root
+
+# Spark配置项
+spark:
+  hive:
+    spark_sql_warehouse_dir: hdfs://master:8020/hive
+    hive_metastore_uris: thrift://master:9083
