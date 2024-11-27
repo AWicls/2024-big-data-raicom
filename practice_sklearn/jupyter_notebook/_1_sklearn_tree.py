@@ -49,5 +49,5 @@ result = model.score(y_scaler, y_test)
 
 # print准确率
 print("最佳参数组合：", model.best_params_)
-print("最佳参数组合得分：",model.best_score_)
+print("最佳参数组合得分：", model.best_score_)
 print(result)
